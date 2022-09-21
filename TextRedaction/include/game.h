@@ -16,8 +16,8 @@ class Application : public QMainWindow
     Q_OBJECT
 
 public:
-    Game(QWidget *parent = nullptr);
-    ~Game();
+    Application(Widget *parent = nullptr);
+    ~Application();
 
 private slots:
     void on_action_New_triggered();
