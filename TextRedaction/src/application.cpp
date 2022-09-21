@@ -1,7 +1,7 @@
 #include "game.h"
 #include "./ui_game.h"
 
-Game::Game(QWidget *parent)
+Application::Application(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Game)
 {
@@ -9,13 +9,13 @@ Game::Game(QWidget *parent)
     this->setCentralWidget(ui->plainTextEdit);
 }
 
-Game::~Game()
+Application::~Application()
 {
     delete ui;
 }
 
 
-void Game::on_action_New_triggered() // new
+void Application::on_action_New_triggered() // new
 {
     ui->plainTextEdit->clear();
 
@@ -23,7 +23,7 @@ void Game::on_action_New_triggered() // new
 }
 
 
-void Game::on_actionOpen_triggered() // open
+void Application::on_actionOpen_triggered() // open
 {
     QString m_strForOpenFile=QFileDialog::getOpenFileName(this,"Open a File");
     QFile file(m_strForOpenFile);
@@ -41,7 +41,7 @@ void Game::on_actionOpen_triggered() // open
 }
 
 
-void Game::on_actionSave_triggered() //save
+void Application::on_actionSave_triggered() //save
 {
     QString m_strForOpenFile=QFileDialog::getSaveFileName(this,"Save a File");
     QFile file(m_strForOpenFile);
@@ -59,26 +59,26 @@ void Game::on_actionSave_triggered() //save
 }
 
 
-void Game::on_actionCopy_triggered() // copy
+void Application::on_actionCopy_triggered() // copy
 {
     ui->plainTextEdit->copy();
 }
 
 
-void Game::on_actionPaste_triggered() // paste
+void Application::on_actionPaste_triggered() // paste
 {
     ui->plainTextEdit->paste();
 
 }
 
 
-void Game::on_actionCut_triggered() // cut
+void Application::on_actionCut_triggered() // cut
 {
     ui->plainTextEdit->cut();
 }
 
 
-void Game::on_actionSelect_triggered() // select
+void Application::on_actionSelect_triggered() // select
 {
      ui->plainTextEdit->selectAll();
 
