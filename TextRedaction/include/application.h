@@ -8,7 +8,7 @@
 #include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Game; }
+namespace Ui { class Application; }
 QT_END_NAMESPACE
 
 class Application : public QMainWindow
@@ -35,7 +35,7 @@ private slots:
     void on_actionSelect_triggered();
 
 private:
-    Ui::Game *ui;
+    Ui::Application *ui;
     QString m_fileName;
 };
 #endif // GAME_H
