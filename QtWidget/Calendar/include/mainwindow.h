@@ -38,9 +38,7 @@ public slots:
 private:
     void InsertCalendar();
 
-
 private:
-
     QLabel *_dateLabel;
     QComboBox *_monthCombo;
     int _frontSize;
