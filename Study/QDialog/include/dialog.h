@@ -19,22 +19,25 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
-
+    
 private:
-
-    void createHorizGroupBox();
-    void createMenu();
-    void createFormGroupBox();
-
-
+  void createHorizGroupBox();
+  void createMenu();
+  void createFormGroupBox();
+    
+private:
     QMenu *menu;
     QMenuBar *menuBar;
-     QAction *exitAction;
+    
+    QAction *exitAction;
 
     QGroupBox *horizGroup;
     QGroupBox *fromBox;
+    
     enum {numButton=3};
+    
     QPushButton *buttons[numButton];
+    
     Ui::Dialog *ui;
 };
 #endif // DIALOG_H
